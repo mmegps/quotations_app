@@ -6,14 +6,13 @@
 {% block content %}
     <h1>!! Quotations and Phrases !!</h1>
     <p>This is a very basic attempt on serving quotations.</p>
-    <p>{{ number }}</p>
-    <p>There are 6 butterflies... 
-        {% if number == 6 %} 
-            True
-        {% else %}
-            False
-        {% endif %}
-    </p>
+
+    <p>There are a total of {{ total_count }} quotes... </p>
+
+    {% for q in things %}
+    <h3>{{ q.quote}}</h3>
+    <p>{{ q.date }}</p>
+    {% endfor %}
 
 {% endblock content %}
 
