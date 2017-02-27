@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{ quote.quote }}} - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <h2> {{ quote.quote }} </h2>
+
+{% endblock content %}

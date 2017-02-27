@@ -5,15 +5,18 @@
 
 {% block content %}
     <h1>!! Quotations and Phrases !!</h1>
-    <p>This is a very basic attempt on serving quotations.</p>
-
     <p>There are a total of {{ total_count }} quotes... </p>
 
     {% for q in things %}
-    <h3>{{ q.quote}}</h3>
-    <p>{{ q.date }}</p>
+    <h3>{{ q.date }} <I>{{ q.quote}} </I></h3>
     {% endfor %}
 
+    {% for q in things %}
+    <h2>
+    	<a href="{% url 'quote_detail' slug=q.slug %}"> {{q.quote}}
+    	</a>
+    </h2>
+    {% endfor %}
 {% endblock content %}
 
 {% block footer %}
