@@ -14,5 +14,8 @@ urlpatterns = [
         name='contact'),
     url(r'^quotes/(?P<slug>[-\w]+)/$', views.quote_detail,
     	name='quote_detail'),
+    url(r'^quotes/(?P<slug>[-\w]+)/edit/$',
+    	views.edit_quote,
+    	name='edit_quote'),
     url(r'^admin/', admin.site.urls),
 ]
