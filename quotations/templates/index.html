@@ -4,12 +4,19 @@
 {% endblock title %}
 
 {% block content %}
-    <h1>!! Quotations and Phrases !!</h1>
     <p>There are a total of {{ total_count }} quotes... </p>
+
+<div class="sechighlight">
+<div class="container sec">
 
     {% for q in things %}
     <h3>{{ q.date }} <I>{{ q.quote}} </I></h3>
     {% endfor %}
+</div>
+</div>
+
+<div class="sechighlight">
+<div class="container sec">
 
     {% for q in things %}
     <h2>
@@ -17,6 +24,9 @@
     	</a>
     </h2>
     {% endfor %}
+</div>
+</div>
+
 {% endblock content %}
 
 {% block footer %}

@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.generic import TemplateView
 
@@ -17,5 +17,7 @@ urlpatterns = [
     url(r'^quotes/(?P<slug>[-\w]+)/edit/$',
     	views.edit_quote,
     	name='edit_quote'),
+    url(r'^accounts/',
+         include('registration.backends.simple.urls')),
     url(r'^admin/', admin.site.urls),
 ]
